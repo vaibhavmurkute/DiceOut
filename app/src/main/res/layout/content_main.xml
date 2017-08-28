@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.diceout.diceout.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lets Roll!"
+        android:id="@+id/outputText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/holo_blue_dark" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageDice2"
+        android:src="@drawable/die_1"
+
+        android:layout_alignTop="@+id/imageDice1"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageDice3"
+        android:src="@drawable/die_1"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_alignTop="@+id/imageDice2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/imageDice1"
+        android:src="@drawable/die_1"
+        android:layout_marginLeft="21dp"
+        android:layout_below="@+id/outputText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guessDice1"
+        android:layout_toRightOf="@+id/textGuess1"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/textGuessHeader"
+        android:text="Guess Dice Values:"
+        android:layout_below="@id/imageDice1"
+        android:layout_alignLeft="@id/imageDice1"
+        android:layout_alignStart="@id/imageDice1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="First Die:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/textGuess1"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@id/textGuessHeader"
+        android:layout_marginTop="25dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guessDice2"
+        android:layout_toRightOf="@+id/textGuess2"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="60dp"
+        />
+
+    <TextView
+        android:text="Third Die:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textGuess3"
+        android:layout_below="@+id/textGuess2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="130dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guessDice3"
+        android:layout_toRightOf="@id/textGuess3"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="83dp"
+        />
+
+    <TextView
+        android:text="Second Die:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/textGuess2"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="80dp"
+        android:layout_below="@id/textGuess1"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="Score : 0"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:id="@+id/textScore"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="30sp"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="Reset Score"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonClearScore"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:onClick="clearScore"
+        android:background="@android:color/holo_blue_dark"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>
